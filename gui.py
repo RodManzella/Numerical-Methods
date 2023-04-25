@@ -1,18 +1,17 @@
 import numericalMethods as method
-import math as m
-import PySimpleGUI as sg
+import math
+
+def func(x):
+    return math.pow(x, 2) - math.exp(x);
+
+def gerador(x):
+    return -math.sqrt(math.exp(x))
+
+def derivada(x):
+    h = 0.01
+    return (func(x + h) - func(x)) / h
 
 
-#  equacao = input("Digite a equação que deseja calcular: ")
-
-
-intervalo = [0, 1]
-
-
-
-equacaoStr = input("Digite uma equação: ")
-
-print()
 
 
 
