@@ -54,7 +54,7 @@ def newtonRaphson(aproxInit, limit):
     iterations = 100
     i = 1
 
-    while math.fabs(f.func(aproxInit)):
+    while math.fabs(f.func(aproxInit)) > limit:
 
         x = aproxInit - f.func(aproxInit) / f.derivada(aproxInit)
         aproxInit = x
@@ -66,6 +66,26 @@ def newtonRaphson(aproxInit, limit):
     if(i < iterations):
         print(f"Raiz é :{aproxInit}")
 
+
+def fixedPoint(aproxInit, limit):
+    iterations = 100
+    i = 1
+    count  = 0
+
+    while math.fabs(f.func(aproxInit)) > limit:
+        x1 = f.gerador(aproxInit)
+        x0 = x1
+        i = i + 1
+
+        if i >= iterations:
+            print("Raiz não foi encontrada")
+            break
+
+        count = count + 1
+
+    if i < iterations:
+        print(f"A raiz é {aproxInit}")
+        print(count)
 
 
        

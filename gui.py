@@ -9,7 +9,10 @@ def gerador(x):
 
 def derivada(x):
     h = 0.01
-    return (func(x + h) - func(x)) / h
+    return (math.pow(x, 2) - math.exp(x)) / h
+
+
+
 
 
 
